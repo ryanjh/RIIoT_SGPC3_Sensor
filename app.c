@@ -78,15 +78,15 @@ static void measureSensorTVOC(void)
     static uint8_t measureCount = 0;
     uint16_t tvoc = 0;
 
-    SPR_OK == readSensor(SGPC3_MEASURE_AIR_QUALITY, &tvoc);
-    Debug.printline("measureSensorTVOC: tvoc=%d", tvoc);
+    SPR_Status status = readSensor(SGPC3_MEASURE_AIR_QUALITY, &tvoc);
+    Debug.printline("measureSensorTVOC: status=%x, tvoc=%d", status, tvoc);
     
     measureCount += MONITOR_TVOC_INTERVAL;
     if (measureCount >= TRANSMITE_TVOC_INTERVAL) {
         // Make periodic transmissions every 1 hours under normal operation.
         transmitSensorTVOC(tvoc);
         measureCount = 0; // reset counter
-    } else if (tvoc > ALARM_TVOC * 1000) {
+    } else if (PR_OK == status && tvoc > ALARM_TVOC * 1000) {
         // If the VOC reading is out of the normal range, make an immediate “alarm” transmission.
         // The normal range is up to 20 ppm (20000 ppb).
         transmitSensorTVOC(tvoc);
