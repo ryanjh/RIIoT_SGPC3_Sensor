@@ -86,7 +86,7 @@ static void measureSensorTVOC(void)
         // Make periodic transmissions every 1 hours under normal operation.
         transmitSensorTVOC(tvoc);
         measureCount = 0; // reset counter
-    } else if (PR_OK == status && tvoc > ALARM_TVOC * 1000) {
+    } else if (SPR_OK == status && tvoc > ALARM_TVOC * 1000) {
         // If the VOC reading is out of the normal range, make an immediate “alarm” transmission.
         // The normal range is up to 20 ppm (20000 ppb).
         transmitSensorTVOC(tvoc);
