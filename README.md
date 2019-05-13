@@ -1,6 +1,6 @@
 # RIIoT_SGPC3_Sensor
 
-Make an application on Radioccrafts RIIoT for monitoring air quality using a VOC sensor. The Radioccrafts Sensor Board got a VOC sensor SGPC3 from Sensirion that is connected to the RIIoT module. It is an application based on the ICI (Intelligent C-programmable I/O) framework.
+Make an application on RIIoT for monitoring air quality using a VOC sensor. The Sensor Board got a VOC sensor SGPC3 from Sensirion that is connected to the RIIoT module. It is an application based on the ICI (Intelligent C-programmable I/O) framework.
 
 Scenario:
 - Make periodic transmissions every 1 hours under normal operation.
