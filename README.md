@@ -11,6 +11,7 @@ The SGPC3 is a digital ultra-low power gas sensor designed for mobile and batter
 temperature-controlled micro-hotplate and a preprocessed indoor air quality signal. The sensing element features an unmatched robustness against contamination by siloxanes present in real-world applications enabling a unique long-term stability and
 low drift.
 https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/0_Datasheets/Gas/Sensirion_Gas_Sensors_SGPC3_Datasheet.pdf
+![Table 10 Measurement commands (https://github.com/ryanjh/RIIoT_SGPC3_Sensor/blob/master/Sensirion_Gas_Sensors_SGPC3_Datasheet.png)
 
 ## Requirements for application ##
 1. Make periodic transmissions every 1 hours under normal operation.
